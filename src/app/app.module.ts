@@ -9,11 +9,13 @@ import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
 import { CategoryComponent } from './category/category.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { ProductComponent } from './products/product/product.component';
 
 const appRoutes:Routes=[
     {path:'',component:HomeComponent},
     {path:'home',component:HomeComponent},
     {path:'products',component:ProductsComponent},
+    {path:'products/:id',component:ProductComponent},
     {path:'users',component:UsersComponent},
     {path:'**',component:ErrorPageComponent}
 ];
@@ -25,7 +27,8 @@ const appRoutes:Routes=[
     ProductsComponent,
     UsersComponent,
     CategoryComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

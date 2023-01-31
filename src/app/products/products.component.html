@@ -1,5 +1,12 @@
 <p>products works!</p>
 
+<ul class="list-group">
+    <li *ngFor="let product of products" class="list-group-item">
+        {{product.name}}
+        <a [routerLink]="['/products',product.id]">Detalles</a>
+    </li>
+</ul>
+
 <p>
     <a routerLink="/products">products</a>
 </p>
